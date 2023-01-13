@@ -1,3 +1,5 @@
+var cliks = 0;
+
 function getRandomColor() {
 				
     var letters = "0123456789ABCDEF".split('');
@@ -10,12 +12,11 @@ function getRandomColor() {
 
 } 
 
-
-var clickedTime; var createdTime; var reactionTime; 
+var clickedTime; var createdTime; var reactieTijd; 
 
 function makeBox() {
         var time=Math.random();
-        time=time*600;
+        time=time*1300;
     
     setTimeout(function() {
     
@@ -26,12 +27,12 @@ function makeBox() {
             } else {
             
                 document.getElementById("box").style.borderRadius="0";
-            }
+            } 
             
         var top= Math.random();
             top= top*300;
         var left= Math.random();
-            left= left*500; 
+            left= left*1100; 
             
         document.getElementById("box").style.top = top + "px";
         document.getElementById("box").style.left = left + "px"; 
@@ -47,19 +48,25 @@ function makeBox() {
 }
 
 document.getElementById("box").onclick=function() {
+cliks++;
 
     clickedTime=Date.now();
     
-    reactionTime=(clickedTime-createdTime)/1000;
+    reactieTijd=(clickedTime-createdTime)/1000;
     
-    document.getElementById("printReactionTime").innerHTML="Je reactie tijd is: " + reactionTime + "seconds";
+    document.getElementById("printReactionTime").innerHTML="Je reactie tijd is: " + reactieTijd + "seconds";
+    
+    document.getElementById("score").innerText = "HighScore: " + cliks;
     
     this.style.display="none";
     
+
+
     makeBox();
     
     
 }
+
 
 makeBox(); 
 
