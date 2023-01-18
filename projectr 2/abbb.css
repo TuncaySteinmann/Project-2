@@ -1,12 +1,49 @@
 *{
-    margin: 0;
     padding: 0;
+    margin: 0;
+
 }
 
 body{
     background-color: black;
+}
+#game{
+    width: 500px;
+    height: 500px;
+    border: 1px solid rgb(230, 230, 230);
+    margin: auto;
     overflow: hidden;
-    background-image: url(/img/Top-6-Software-Development-Methodologies.jpg);
+    position: relative;
+    top: 10px;
+}
+#block{
+    width: 50px;
+    height: 500px;
+    background-color: rgb(250, 250, 250);
+    position: relative;
+    left: 400px;
+    animation: block 2s infinite linear;
+}
+@keyframes block{
+    0%{left:400px}
+    100%{left:-50px}
+}
+#hole{
+    width: 50px;
+    height: 150px;
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    left: 400px;
+    top: -500px;
+    animation: block 2s infinite linear;
+}
+#character{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(91, 166, 209);
+    position: absolute;
+    top: 100px;
+    border-radius: 50%;
 }
 
 ul{
@@ -51,26 +88,4 @@ ul{
         display: block;
         border-radius:  5px; ;
     }
-    
-    .A , .Ab , .N , .T{
-        width: 500px;
-        border-radius: 15px;
-        background-color: rgb(0, 255, 242);
-        position: relative;
-        left: 500px;;
-        top: 350px;
-    
-    }
-    h1{
-        color: #fff;
-    }
-    .papa{
-        position: relative;
-        top: 8vh;
-        left: 70px;
-        height:100vh;
-        background-color:black;
-    
-    }
-    
     

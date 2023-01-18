@@ -53,10 +53,20 @@ ul li:hover ul.favorite{
 .A , .Ab , .N , .T{
     width: 500px;
     border-radius: 15px;
-    background-color: blue;
-    position: absolute;
+    background-color: rgb(0, 255, 242);
+    position: relative;
+    left: 500px;;
+    top: 250px;
 
 }
+
+.Anfav , .Nofav , .tunfav , .Apfav{
+    width: 500px;
+    background-color:  rgb(0, 255, 242);
+    border: 15px;
+    border-radius: 15px;
+}
+
 h1{
     color: #fff;
 }
@@ -65,8 +75,13 @@ h1{
     top: 8vh;
     left: 70px;
     height:100vh;
+    background-color:black;
 
-  
- background-color:black;
 
 }
+
+.mama{
+   width: 700px;
+   height: 500px;
+}
+
